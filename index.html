@@ -172,7 +172,11 @@ select.st { font: inherit; font-size: 14px; background: var(--void); color: var(
 .big-facts span { font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ash); }
 .case.feature + .case.feature { margin-top: 0; }
 .viral { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
-@media (max-width: 860px) { .viral { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.viral .hero { grid-column: span 2; grid-row: span 2; }
+.viral .hero img { aspect-ratio: auto; height: 100%; min-height: 0; }
+.viral .hero { grid-template-rows: minmax(0, 1fr) auto; }
+.viral .hero figcaption b { font-size: 44px; }
+@media (max-width: 860px) { .viral { grid-template-columns: repeat(2, minmax(0, 1fr)); } .viral .hero { grid-row: auto; } .viral .hero img { aspect-ratio: 9 / 16; height: auto; } }
 @media (max-width: 480px) { .viral { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .viral figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
 .viral img { width: 100%; max-width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border: 1px solid var(--line); border-radius: 4px; transition: transform .3s, border-color .3s; }
@@ -249,11 +253,13 @@ select.st { font: inherit; font-size: 14px; background: var(--void); color: var(
       <article class="case wide glass rv">
         <div class="head">
           <div class="copy" style="display:grid;gap:12px"><span class="kind">Viral run</span><h3 style="font-size:clamp(36px,4.4vw,56px)">Butter Funk Kitchen</h3><span class="client" style="font-family:var(--f-mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ash)">Soul food · Houston · Social media manager</span></div>
-          <div style="display:grid;gap:14px"><div class="big-facts"><div><b>812K</b><span>Top post</span></div><div><b>1.6M+</b><span>These five posts</span></div><div><b>3.2M+</b><span>Total impressions</span></div><div><b>+1,600%</b><span>Shares</span></div></div>
-          <p style="margin:0">Memes, customer reactions and plate shots for a Houston soul food kitchen. Five posts that each cleared 100K views.</p></div>
+          <div style="display:grid;gap:14px"><div class="big-facts"><div><b>1.2M</b><span>Top post</span></div><div><b>3.5M+</b><span>These seven posts</span></div><div><b>7</b><span>Posts over 100K</span></div><div><b>+1,600%</b><span>Shares</span></div></div>
+          <p style="margin:0">Influencer reviews, staff promos, memes, customer reactions and plate shots for a Houston soul food kitchen. Seven posts that each cleared 100K views, led by a 1.2M-view food review with @eatsbydae.</p></div>
         </div>
         <div class="viral">
-          <figure><img src="media/bf-812k.jpg" alt="Bar meme reel with shots and limes, 812K views" loading="lazy"><figcaption><b class="top">812K</b><span>Bar meme</span></figcaption></figure>
+          <figure class="hero"><img src="media/bf-1-2m.jpg" alt="Butter Funk Kitchen hot fish plate with greens and mac and cheese, 1.2M views" loading="lazy"><figcaption><b class="top">1.2M</b><span>Influencer food review · @eatsbydae</span></figcaption></figure>
+          <figure><img src="media/bf-812k.jpg" alt="Bar meme reel with shots and limes, 812K views" loading="lazy"><figcaption><b>812K</b><span>Bar meme</span></figcaption></figure>
+          <figure><img src="media/bf-724k.jpg" alt="Employee holding a wings plate and a drink for a Super Bowl promo, 724K views" loading="lazy"><figcaption><b>724K</b><span>Super Bowl staff promo</span></figcaption></figure>
           <figure><img src="media/bf-285k.jpg" alt="Hot fried fish fillet glazed in sauce, 285K views" loading="lazy"><figcaption><b>285K</b><span>Hot fish</span></figcaption></figure>
           <figure><img src="media/bf-224k.jpg" alt="Customer in her car saying the food tastes the same every time, 224K views" loading="lazy"><figcaption><b>224K</b><span>Customer reaction</span></figcaption></figure>
           <figure><img src="media/bf-204k.jpg" alt="Blackened fish plate with greens, Brussels sprouts and cornbread, 204K views" loading="lazy"><figcaption><b>204K</b><span>Plate shot</span></figcaption></figure>
