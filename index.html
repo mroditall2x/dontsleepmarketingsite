@@ -188,6 +188,12 @@ select.st { font: inherit; font-size: 14px; background: var(--void); color: var(
 .case.wide { grid-template-columns: minmax(0, 1fr); gap: 22px; }
 .case.wide .head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 28px; align-items: start; }
 @media (max-width: 760px) { .case.wide .head { grid-template-columns: minmax(0, 1fr); } }
+.sites { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+@media (max-width: 860px) { .sites { grid-template-columns: minmax(0, 1fr); } }
+.site { background: rgba(7,6,10,.85); padding: 22px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.site h4 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; color: var(--bone); font-size: 30px; line-height: 1; margin: 0; }
+.site p { margin: 0; font-size: 15px; }
+.site:first-child h4 { color: var(--iris-hot); }
 .case.feature .client { font-family: var(--f-mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--ash); }
 @media (prefers-reduced-motion: reduce) { .rv, .rv.pre { opacity: 1; transform: none; transition: none; } .b0 .cue i { animation: none; } }
 </style>
@@ -268,15 +274,18 @@ select.st { font: inherit; font-size: 14px; background: var(--void); color: var(
           <figure><img src="media/bf-101k.jpg" alt="Fried chicken plate with mac and cheese and greens, 101K views" loading="lazy"><figcaption><b>101K</b><span>Plate drop</span></figcaption></figure>
         </div>
       </article>
-      <article class="case feature glass rv">
-        <video id="promo" class="autoplay" src="media/trill-burgers-promo.mp4" poster="media/trill-burgers-promo.jpg" muted loop playsinline controls preload="metadata" aria-label="Trill Burgers promo video"></video>
-        <div class="copy"><span class="kind">Promo video</span><h3>Trill Burgers promo</h3><span class="client">Cut from real kitchen footage</span>
-          <p>A 20-second vertical promo: smash patties on the griddle, the OG built beat by beat, a hard hit on "Smashed. Sauced. Trill." and a logo lockup. Scored with an original Halloween track.</p>
-          <div class="facts"><span><b>20s</b> · 9:16</span><span><b>11</b> shots</span><span>Original score</span></div>
-          <p class="client" style="margin:0">Tap the video for sound</p></div>
+      <article class="case wide glass rv">
+        <div class="head">
+          <div style="display:grid;gap:12px;align-content:start"><span class="kind">Websites</span><h3 style="font-size:clamp(36px,4.4vw,56px)">Restaurant site system</h3>
+            <p style="margin:0">Animated restaurant sites built to turn visitors into orders, bookings and leads, with an owner dashboard where all of it lands.</p></div>
+          <div class="facts" style="align-self:start"><span><b>Booking</b> calendars</span><span><b>Pickup</b> ordering</span><span><b>AI</b> chat host</span><span><b>Live</b> reviews</span><span><b>Owner</b> dashboard</span></div>
+        </div>
+        <div class="sites">
+          <div class="site"><span class="kind">Client redesign</span><h4>Southern Belle's Eatery</h4><p>A full redesign of the site I built for a Houston soul food kitchen and food truck: bold black-and-gold look, menu, truck hours and locations, a catering quote form, book-the-truck requests, and live customer reviews in place of preset quotes. Four homepage directions, plus catering and policies pages.</p></div>
+          <div class="site"><span class="kind">Demo</span><h4>The Hit Soul Food</h4><p>Red, black and yellow soul food demo with this week's specials, a build-a-plate pickup order with a live receipt, table booking and catering.</p></div>
+          <div class="site"><span class="kind">Demo</span><h4>GILT Burger Bar</h4><p>Late-night burger bar demo with griddle sparks in the hero, a tabbed menu, a booking calendar and a chat host that captures callback leads.</p></div>
+        </div>
       </article>
-      <article class="case glass rv"><span class="kind">Event recap</span><div><h3>Rally day hype ad</h3></div><div><p>Eighteen phone clips turned into a sneaker-ad style hype cut: whip transitions, light-leak burns, slanted manifesto type and a hard drop at 17 seconds.</p><div class="facts"><span><b>36s</b> · 9:16</span><span><b>41</b> cuts</span><span>Original score</span></div></div></article>
-      <article class="case glass rv"><span class="kind">Website</span><div><h3>Restaurant site system</h3></div><div><p>Animated restaurant sites with a booking calendar, build-a-plate pickup ordering, an AI chat host and an owner dashboard for every order and lead.</p><div class="facts"><span><b>Booking</b></span><span><b>Orders</b></span><span><b>Live</b> dashboard</span></div></div></article>
     </div>
   </div></section>
 
