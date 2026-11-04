@@ -171,6 +171,19 @@ select.st { font: inherit; font-size: 14px; background: var(--void); color: var(
 .big-facts div:last-child b { color: var(--iris); }
 .big-facts span { font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ash); }
 .case.feature + .case.feature { margin-top: 0; }
+.viral { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 860px) { .viral { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .viral { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.viral figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
+.viral img { width: 100%; max-width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border: 1px solid var(--line); border-radius: 4px; transition: transform .3s, border-color .3s; }
+.viral figure:hover img { transform: translateY(-4px); border-color: var(--iris); }
+.viral figcaption { display: grid; gap: 2px; }
+.viral figcaption b { font-family: var(--f-display); font-weight: 400; font-size: 28px; color: var(--bone); line-height: 1; }
+.viral figcaption b.top { color: var(--iris); }
+.viral figcaption span { font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ash); }
+.case.wide { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+.case.wide .head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 28px; align-items: start; }
+@media (max-width: 760px) { .case.wide .head { grid-template-columns: minmax(0, 1fr); } }
 .case.feature .client { font-family: var(--f-mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--ash); }
 @media (prefers-reduced-motion: reduce) { .rv, .rv.pre { opacity: 1; transform: none; transition: none; } .b0 .cue i { animation: none; } }
 </style>
@@ -232,6 +245,20 @@ select.st { font: inherit; font-size: 14px; background: var(--void); color: var(
           <div class="big-facts"><div><b>500K+</b><span>Instagram views</span></div><div><b>500K+</b><span>Facebook views</span></div><div><b>50K+</b><span>TikTok views</span></div><div><b>1M+</b><span>Total views</span></div></div>
           <p>A 13-second reel teasing the "full beast mode" National Burger Day special: loaded fries and a stacked burger in the Houston Made box, cut fast and posted the day before. It crossed a million views across Instagram, Facebook and TikTok.</p>
           <a class="btn ghost" href="https://www.instagram.com/reel/DY2gCYyuKEh/" target="_blank" rel="noopener">See it on Instagram</a></div>
+      </article>
+      <article class="case wide glass rv">
+        <div class="head">
+          <div class="copy" style="display:grid;gap:12px"><span class="kind">Viral run</span><h3 style="font-size:clamp(36px,4.4vw,56px)">Butter Funk Kitchen</h3><span class="client" style="font-family:var(--f-mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ash)">Soul food · Houston · Social media manager</span></div>
+          <div style="display:grid;gap:14px"><div class="big-facts"><div><b>812K</b><span>Top post</span></div><div><b>1.6M+</b><span>These five posts</span></div><div><b>3.2M+</b><span>Total impressions</span></div><div><b>+1,600%</b><span>Shares</span></div></div>
+          <p style="margin:0">Memes, customer reactions and plate shots for a Houston soul food kitchen. Five posts that each cleared 100K views.</p></div>
+        </div>
+        <div class="viral">
+          <figure><img src="media/bf-812k.jpg" alt="Bar meme reel with shots and limes, 812K views" loading="lazy"><figcaption><b class="top">812K</b><span>Bar meme</span></figcaption></figure>
+          <figure><img src="media/bf-285k.jpg" alt="Hot fried fish fillet glazed in sauce, 285K views" loading="lazy"><figcaption><b>285K</b><span>Hot fish</span></figcaption></figure>
+          <figure><img src="media/bf-224k.jpg" alt="Customer in her car saying the food tastes the same every time, 224K views" loading="lazy"><figcaption><b>224K</b><span>Customer reaction</span></figcaption></figure>
+          <figure><img src="media/bf-204k.jpg" alt="Blackened fish plate with greens, Brussels sprouts and cornbread, 204K views" loading="lazy"><figcaption><b>204K</b><span>Plate shot</span></figcaption></figure>
+          <figure><img src="media/bf-101k.jpg" alt="Fried chicken plate with mac and cheese and greens, 101K views" loading="lazy"><figcaption><b>101K</b><span>Plate drop</span></figcaption></figure>
+        </div>
       </article>
       <article class="case feature glass rv">
         <video id="promo" class="autoplay" src="media/trill-burgers-promo.mp4" poster="media/trill-burgers-promo.jpg" muted loop playsinline controls preload="metadata" aria-label="Trill Burgers promo video"></video>
