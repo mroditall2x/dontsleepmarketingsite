@@ -147,13 +147,11 @@ select.st { font: inherit; font-size: 14px; background: var(--void); color: var(
 .stat .k { font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ash); }
 .stat-src { font-size: 14px; color: var(--ash); margin: 0 0 48px; }
 .timeline { display: grid; gap: 0; border-top: 1px solid var(--line); }
-.role { display: grid; grid-template-columns: 190px minmax(0, 1fr) minmax(0, 1.4fr); gap: 24px; padding-block: 22px; border-bottom: 1px solid var(--line); align-items: baseline; }
+.role { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 24px; padding-block: 22px; border-bottom: 1px solid var(--line); align-items: baseline; }
 @media (max-width: 760px) { .role { grid-template-columns: minmax(0, 1fr); gap: 6px; } }
-.role .when { font-family: var(--f-mono); font-size: 13px; letter-spacing: .08em; color: var(--iris); font-variant-numeric: tabular-nums; }
 .role h3 { font-size: clamp(26px, 3vw, 36px); }
 .role h3 small { display: block; font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; color: var(--ash); margin-top: 6px; }
 .role p { margin: 0; }
-.role.now .when::after { content: " \00b7 now"; color: var(--bone); }
 
 /* featured video case */
 .case.feature { grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 32px; align-items: center; }
@@ -241,10 +239,10 @@ select.st { font: inherit; font-size: 14px; background: var(--void); color: var(
     </div>
     <p class="stat-src rv">Viral posts across Butter Funk and Trill Burgers, plus Trill Burgers' average monthly reach.</p>
     <div class="timeline">
-      <div class="role now rv"><span class="when">Jun 2022 –</span><h3>Trill Burgers<small>Social media manager</small></h3><p>Social strategy for a high-profile Houston burger brand: TikTok and Instagram content tied to local events, influencer partnerships and trend moments that drive store traffic, averaging 2M+ views a month.</p></div>
-      <div class="role rv"><span class="when">Sep – Oct 2025</span><h3>Butter Funk<small>Social media manager</small></h3><p>Influencer reviews, staff promos and TikTok storytelling: seven posts over 100K views, 3.5M+ combined, led by a 1.2M-view review with @eatsbydae.</p></div>
-      <div class="role rv"><span class="when">Jun 2022 – Oct 2025</span><h3>Bar 2200<small>Social media specialist</small></h3><p>Ran a nightlife venue's social presence: weekly events, promotions and community engagement.</p></div>
-      <div class="role now rv"><span class="when">Jul 2018 –</span><h3>DontSleep<small>Web designer, self-employed</small></h3><p>Websites for Houston businesses, from church sites to restaurant revamps with booking and online ordering.</p></div>
+      <div class="role rv"><h3>Trill Burgers<small>Social media manager</small></h3><p>Social strategy for a high-profile Houston burger brand: TikTok and Instagram content tied to local events, influencer partnerships and trend moments that drive store traffic, averaging 2M+ views a month.</p></div>
+      <div class="role rv"><h3>Butter Funk<small>Social media manager</small></h3><p>Influencer reviews, staff promos and TikTok storytelling: seven posts over 100K views, 3.5M+ combined, led by a 1.2M-view review with @eatsbydae.</p></div>
+      <div class="role rv"><h3>Bar 2200<small>Social media specialist</small></h3><p>Ran a nightlife venue's social presence: weekly events, promotions and community engagement.</p></div>
+      <div class="role rv"><h3>DontSleep<small>Web designer, self-employed</small></h3><p>Websites for Houston businesses, from church sites to restaurant revamps with booking and online ordering.</p></div>
     </div>
   </div></section>
 
