@@ -5,7 +5,7 @@ The DontSleepMarketing website: a single-page motion site for a Houston social m
 ## What's here
 
 - `index.html`: the whole site (styles, markup, and scripts in one file). Fonts load from Google Fonts.
-- `media/`: the Trill Burgers promo (web-compressed MP4, about 4 MB) and its poster frame.
+- `media/`: the Trill Burgers National Burger Day reel and kitchen promo (web-compressed MP4s) with poster frames.
 
 ## Deploy
 

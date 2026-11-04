@@ -227,14 +227,14 @@ select.st { font: inherit; font-size: 14px; background: var(--void); color: var(
     <div class="sec-head rv"><span class="mono">Recent work</span><h2>Stuff that moved</h2><p>Recent builds for real Houston spots. Ask for the full reel on a call.</p></div>
     <div class="work">
       <article class="case feature glass rv">
-        <div class="reel"><iframe src="https://www.instagram.com/reel/DY2gCYyuKEh/embed" title="Trill Burgers National Burger Day reel on Instagram" loading="lazy" allowtransparency="true" scrolling="no"></iframe></div>
+        <video class="autoplay" src="media/trill-burgers-national-burger-day.mp4" poster="media/trill-burgers-national-burger-day.jpg" muted loop playsinline controls preload="metadata" aria-label="Trill Burgers National Burger Day reel"></video>
         <div class="copy"><span class="kind">Viral reel</span><h3>Trill Burgers</h3><span class="client">National Burger Day drop · Social media manager since 2022</span>
           <div class="big-facts"><div><b>500K+</b><span>Instagram views</span></div><div><b>500K+</b><span>Facebook views</span></div><div><b>1M+</b><span>Total views</span></div></div>
           <p>A 13-second reel teasing the "full beast mode" National Burger Day special: loaded fries and a stacked burger in the Houston Made box, cut fast and posted the day before. It crossed a million views across Instagram and Facebook.</p>
-          <a class="btn ghost" href="https://www.instagram.com/reel/DY2gCYyuKEh/" target="_blank" rel="noopener">Watch on Instagram</a></div>
+          <a class="btn ghost" href="https://www.instagram.com/reel/DY2gCYyuKEh/" target="_blank" rel="noopener">See it on Instagram</a></div>
       </article>
       <article class="case feature glass rv">
-        <video id="promo" src="media/trill-burgers-promo.mp4" poster="media/trill-burgers-promo.jpg" muted loop playsinline controls preload="metadata" aria-label="Trill Burgers promo video"></video>
+        <video id="promo" class="autoplay" src="media/trill-burgers-promo.mp4" poster="media/trill-burgers-promo.jpg" muted loop playsinline controls preload="metadata" aria-label="Trill Burgers promo video"></video>
         <div class="copy"><span class="kind">Promo video</span><h3>Trill Burgers promo</h3><span class="client">Cut from real kitchen footage</span>
           <p>A 20-second vertical promo: smash patties on the griddle, the OG built beat by beat, a hard hit on "Smashed. Sauced. Trill." and a logo lockup. Scored with an original Halloween track.</p>
           <div class="facts"><span><b>20s</b> · 9:16</span><span><b>11</b> shots</span><span>Original score</span></div>
@@ -440,8 +440,9 @@ else requestAnimationFrame(frame);
     const step = (n) => { const p = Math.min(1, (n - t0) / 1400); fmt(el, end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); }), { threshold: .6 });
   els.forEach(el => { if (el.getBoundingClientRect().top > innerHeight) io.observe(el); }); })();
 // ---------- promo plays muted while on screen ----------
-(() => { const v = document.getElementById('promo'); if (!v || !('IntersectionObserver' in window)) return;
-  new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !reduce) v.play().catch(() => {}); else v.pause(); }), { threshold: .5 }).observe(v); })();
+(() => { if (!('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !reduce) e.target.play().catch(() => {}); else e.target.pause(); }), { threshold: .5 });
+  document.querySelectorAll('video.autoplay').forEach(v => io.observe(v)); })();
 
 // ---------- leads: shared db when available, this-device storage otherwise ----------
 const LOCAL_KEY = 'dsm_leads_v1'; let MEM = [];
